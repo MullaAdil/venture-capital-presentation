@@ -8,25 +8,25 @@
 :root {
   --bg-app: #F8FAFC;
   --bg-slide-card: #FFFFFF;
-  
+
   --pastel-blue-bg: #EFF6FF;
   --pastel-blue-border: #BFDBFE;
   --pastel-blue-text: #1E3A8A;
-  
+
   --pastel-green-bg: #F0FDF4;
   --pastel-green-border: #BBF7D0;
   --pastel-green-text: #14532D;
-  
+
   --pastel-pink-bg: #FFF1F2;
   --pastel-pink-border: #FECDD3;
   --pastel-pink-text: #881337;
-  
+
   --emerald-btn-bg: linear-gradient(135deg, #10B981, #059669);
   --emerald-btn-hover: linear-gradient(135deg, #059669, #047857);
-  
+
   --primary-blue: #2563EB;
   --primary-blue-dark: #1D4ED8;
-  
+
   --text-main: #0F172A;
   --text-muted: #334155;
   --border-light: #E2E8F0;
@@ -37,14 +37,17 @@
   --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   touch-action: manipulation;
 }
 
-html, body {
+html,
+body {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
@@ -201,8 +204,15 @@ html, body {
 }
 
 @keyframes slideFadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .trio-card {
@@ -366,7 +376,11 @@ html, body {
   margin-bottom: 20px;
 }
 
-.modal-header h2 { color: #FFF; font-size: 20px; font-weight: 800; }
+.modal-header h2 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 800;
+}
 
 .grid-modal-body {
   flex: 1;
@@ -388,11 +402,26 @@ html, body {
   justify-content: space-between;
 }
 
-.thumb-card:hover { border-color: #10B981; }
-.thumb-card.active { border-color: #10B981; box-shadow: 0 0 16px rgba(16, 185, 129, 0.5); }
+.thumb-card:hover {
+  border-color: #10B981;
+}
 
-.thumb-num { font-size: 11.5px; font-weight: 800; color: #059669; }
-.thumb-title { font-size: 13px; font-weight: 800; color: var(--text-main); }
+.thumb-card.active {
+  border-color: #10B981;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.5);
+}
+
+.thumb-num {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #059669;
+}
+
+.thumb-title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-main);
+}
 
 /* ==========================================================================
    MOBILE DEVICES MEDIA QUERIES (Smartphones & Tablets)
@@ -401,41 +430,53 @@ html, body {
   .slide-header {
     padding: 0 12px;
   }
+
   .slide-category {
-    display: none; /* Hide category on small phones for extra space */
+    display: none;
+    /* Hide category on small phones for extra space */
   }
+
   .slide-body {
     padding: 14px 16px;
   }
+
   .slide-title {
     font-size: 22px;
   }
+
   .slide-subtitle {
     font-size: 12.5px;
   }
+
   .layout-title h1 {
     font-size: 32px;
   }
+
   .layout-title p.subtitle {
     font-size: 16px;
   }
+
   .main-logo-box {
     width: 64px;
     height: 64px;
     margin-bottom: 12px;
   }
+
   .bottom-bar {
     padding: 0 14px;
     height: 60px;
   }
+
   .nav-btn {
     padding: 8px 18px;
     font-size: 13.5px;
     min-height: 40px;
   }
+
   .progress-track {
     max-width: 140px;
   }
+
   .grid-modal-body {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -449,35 +490,44 @@ html, body {
     height: 64px;
     padding: 0 48px;
   }
+
   .brand-chip {
     font-size: 16px;
     padding: 6px 18px;
   }
+
   .brand-icon-mini {
     width: 28px;
     height: 28px;
   }
+
   .slide-title {
     font-size: 36px;
   }
+
   .slide-subtitle {
     font-size: 18px;
   }
+
   .layout-title h1 {
     font-size: 64px;
   }
+
   .layout-title p.subtitle {
     font-size: 28px;
   }
+
   .main-logo-box {
     width: 110px;
     height: 110px;
   }
+
   .nav-btn {
     padding: 14px 38px;
     font-size: 18px;
     min-height: 52px;
   }
+
   .slide-counter {
     font-size: 18px;
   }

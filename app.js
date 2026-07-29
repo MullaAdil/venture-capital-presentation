@@ -15,12 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const slideTitle = document.getElementById('slideTitle');
   const slideSubtitle = document.getElementById('slideSubtitle');
   const slideTitleBlock = document.getElementById('slideTitleBlock');
-  
+
   const currentNumEl = document.getElementById('currentNum');
   const totalNumEl = document.getElementById('totalNum');
   const progressFill = document.getElementById('progressFill');
   const progressTrack = document.getElementById('progressTrack');
-  
+
   const prevBtn = document.getElementById('prevBtn');
   const nextBtn = document.getElementById('nextBtn');
   const gridBtn = document.getElementById('gridBtn');
@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Touch Swipe Gesture Support
   let touchStartX = 0;
   let touchEndX = 0;
-  
+
   document.addEventListener('touchstart', (e) => {
     touchStartX = e.changedTouches[0].screenX;
   }, false);
