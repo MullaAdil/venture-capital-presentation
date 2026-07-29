@@ -1,0 +1,484 @@
+/* ==========================================================================
+   Antigravity PPT - Formal Light Executive Presentation Stylesheet
+   Fully Responsive for Mobile Devices & CandyPop Interactive Digital Boards
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+:root {
+  --bg-app: #F8FAFC;
+  --bg-slide-card: #FFFFFF;
+  
+  --pastel-blue-bg: #EFF6FF;
+  --pastel-blue-border: #BFDBFE;
+  --pastel-blue-text: #1E3A8A;
+  
+  --pastel-green-bg: #F0FDF4;
+  --pastel-green-border: #BBF7D0;
+  --pastel-green-text: #14532D;
+  
+  --pastel-pink-bg: #FFF1F2;
+  --pastel-pink-border: #FECDD3;
+  --pastel-pink-text: #881337;
+  
+  --emerald-btn-bg: linear-gradient(135deg, #10B981, #059669);
+  --emerald-btn-hover: linear-gradient(135deg, #059669, #047857);
+  
+  --primary-blue: #2563EB;
+  --primary-blue-dark: #1D4ED8;
+  
+  --text-main: #0F172A;
+  --text-muted: #334155;
+  --border-light: #E2E8F0;
+
+  --shadow-sm: 0 2px 8px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+
+  --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  touch-action: manipulation;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: var(--bg-app);
+}
+
+.presentation-viewport {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 64px);
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-app);
+}
+
+.slide-stage {
+  width: 100%;
+  height: 100%;
+  background: var(--bg-slide-card);
+  border-radius: 0;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  box-shadow: none;
+}
+
+.slide-header {
+  height: 48px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1.5px solid var(--border-light);
+  background: #FAFAFA;
+}
+
+.brand-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--primary-blue-dark);
+}
+
+.brand-icon-mini {
+  width: 22px;
+  height: 22px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+
+.slide-category {
+  font-size: 13px;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.slide-num-badge {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: var(--primary-blue);
+  background: #E0E7FF;
+  padding: 4px 12px;
+  border-radius: 8px;
+}
+
+.control-btn {
+  background: #FFF;
+  border: 1.5px solid var(--border-light);
+  color: var(--text-main);
+  padding: 6px 16px;
+  border-radius: 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  min-height: 38px;
+}
+
+.control-btn:hover {
+  background: var(--pastel-blue-bg);
+  border-color: var(--primary-blue);
+}
+
+.slide-body {
+  flex: 1;
+  padding: 20px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide-title-block {
+  margin-bottom: 12px;
+}
+
+.slide-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.slide-subtitle {
+  font-size: 14px;
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-top: 2px;
+}
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slide-enter {
+  animation: slideFadeIn 0.3s ease forwards;
+}
+
+@keyframes slideFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.trio-card {
+  background: #FFF;
+  border: 1.5px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Formal Title Slide Layout */
+.layout-title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #EFF6FF 0%, #F0FDF4 50%, #FFF1F2 100%);
+  border: 2px solid var(--pastel-blue-border);
+  border-radius: 16px;
+  color: var(--text-main);
+  padding: 36px 24px;
+}
+
+.main-logo-box {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.3);
+  border: 2.5px solid #FFF;
+}
+
+.title-badge {
+  background: #DBEAFE;
+  border: 1.5px solid #BFDBFE;
+  color: #1E3A8A;
+  font-size: 13.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 6px 24px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+}
+
+.layout-title h1 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #0F172A;
+  margin-bottom: 12px;
+}
+
+.layout-title p.subtitle {
+  font-size: 20px;
+  color: #1D4ED8;
+  font-weight: 700;
+}
+
+.flow-step {
+  background: #FFF;
+  border: 1.5px solid var(--border-light);
+  border-top: 5px solid var(--primary-blue);
+  border-radius: 10px;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Bottom Bar & Touch-Friendly Emerald Mint Buttons */
+.bottom-bar {
+  height: 64px;
+  padding: 0 24px;
+  background: #FFFFFF;
+  border-top: 1.5px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+  box-shadow: 0 -4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.nav-btn {
+  background: var(--emerald-btn-bg);
+  border: 1.5px solid #059669;
+  color: #FFF;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  min-height: 44px;
+}
+
+.nav-btn:active {
+  transform: scale(0.97);
+}
+
+.progress-track {
+  flex: 1;
+  max-width: 480px;
+  height: 8px;
+  background: #E2E8F0;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10B981, #0EA5E9);
+  width: 11%;
+  transition: width 0.3s ease;
+}
+
+.slide-counter {
+  color: var(--text-main);
+  font-size: 14.5px;
+  font-weight: 800;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-header h2 { color: #FFF; font-size: 20px; font-weight: 800; }
+
+.grid-modal-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  overflow-y: auto;
+}
+
+.thumb-card {
+  aspect-ratio: 16 / 9;
+  background: #FFF;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.thumb-card:hover { border-color: #10B981; }
+.thumb-card.active { border-color: #10B981; box-shadow: 0 0 16px rgba(16, 185, 129, 0.5); }
+
+.thumb-num { font-size: 11.5px; font-weight: 800; color: #059669; }
+.thumb-title { font-size: 13px; font-weight: 800; color: var(--text-main); }
+
+/* ==========================================================================
+   MOBILE DEVICES MEDIA QUERIES (Smartphones & Tablets)
+   ========================================================================== */
+@media (max-width: 768px) {
+  .slide-header {
+    padding: 0 12px;
+  }
+  .slide-category {
+    display: none; /* Hide category on small phones for extra space */
+  }
+  .slide-body {
+    padding: 14px 16px;
+  }
+  .slide-title {
+    font-size: 22px;
+  }
+  .slide-subtitle {
+    font-size: 12.5px;
+  }
+  .layout-title h1 {
+    font-size: 32px;
+  }
+  .layout-title p.subtitle {
+    font-size: 16px;
+  }
+  .main-logo-box {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 12px;
+  }
+  .bottom-bar {
+    padding: 0 14px;
+    height: 60px;
+  }
+  .nav-btn {
+    padding: 8px 18px;
+    font-size: 13.5px;
+    min-height: 40px;
+  }
+  .progress-track {
+    max-width: 140px;
+  }
+  .grid-modal-body {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================================================
+   CANDYPOP DIGITAL BOARD & 4K PANELS MEDIA QUERIES (Min Width 1920px)
+   ========================================================================== */
+@media (min-width: 1920px) {
+  .slide-header {
+    height: 64px;
+    padding: 0 48px;
+  }
+  .brand-chip {
+    font-size: 16px;
+    padding: 6px 18px;
+  }
+  .brand-icon-mini {
+    width: 28px;
+    height: 28px;
+  }
+  .slide-title {
+    font-size: 36px;
+  }
+  .slide-subtitle {
+    font-size: 18px;
+  }
+  .layout-title h1 {
+    font-size: 64px;
+  }
+  .layout-title p.subtitle {
+    font-size: 28px;
+  }
+  .main-logo-box {
+    width: 110px;
+    height: 110px;
+  }
+  .nav-btn {
+    padding: 14px 38px;
+    font-size: 18px;
+    min-height: 52px;
+  }
+  .slide-counter {
+    font-size: 18px;
+  }
+}

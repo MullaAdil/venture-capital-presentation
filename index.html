@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Venture Capitalists (VC) - Enterprise & Venture Creation Seminar</title>
+  <meta name="description" content="A professional 9-slide presentation deck on Venture Capitalists (VC) for Enterprise and Venture Creation (EVC) seminar. Optimized for Mobile Devices & CandyPop Interactive Digital Whiteboards.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="app-container">
+
+    <!-- Main Presentation Stage Viewport -->
+    <main class="presentation-viewport">
+      <div class="slide-stage" id="slideStage">
+
+        <!-- Slide Top Header -->
+        <div class="slide-header">
+          <div class="brand-chip">
+            <div class="brand-icon-mini">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+            </div>
+            <span>Venture Capitalists (VC)</span>
+          </div>
+          <div class="slide-category" id="slideCategory">Enterprise and Venture Creation (EVC)</div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button id="gridBtn" class="control-btn" title="Slide Overview Grid (G)">
+              <span>🎛️ Overview</span>
+            </button>
+            <div class="slide-num-badge" id="slideNumBadge">01 / 09</div>
+          </div>
+        </div>
+
+        <!-- Slide Interior Body -->
+        <div class="slide-body">
+          <div class="slide-title-block" id="slideTitleBlock">
+            <h2 class="slide-title" id="slideTitle">Slide Title Here</h2>
+            <p class="slide-subtitle" id="slideSubtitle">Slide Subtitle Description</p>
+          </div>
+
+          <!-- Dynamic Layout Content Container -->
+          <div class="slide-content" id="slideContent">
+            <!-- Rendered by app.js -->
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Bottom Navigation Bar (Touch Optimized for Mobile & Digital Boards) -->
+    <footer class="bottom-bar">
+      <div class="nav-buttons">
+        <button id="prevBtn" class="nav-btn" title="Previous Slide (Left Arrow)">◀ Previous</button>
+        <button id="nextBtn" class="nav-btn" title="Next Slide (Right Arrow)">Next ▶</button>
+      </div>
+
+      <div class="progress-track" id="progressTrack" title="Click to jump to slide">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <div class="slide-counter">
+        <span id="currentNum">1</span> / <span id="totalNum">9</span>
+      </div>
+    </footer>
+
+    <!-- Slide Thumbnail Overview Modal -->
+    <div class="modal-overlay" id="gridModal">
+      <div class="modal-header">
+        <h2>Slide Overview Deck (9 Slides)</h2>
+        <button id="closeGridBtn" class="control-btn">✕ Close (Esc)</button>
+      </div>
+      <div class="grid-modal-body" id="gridModalBody">
+        <!-- Thumbnails rendered dynamically -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- JavaScript Datasets & Engine -->
+  <script src="slidesData.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
