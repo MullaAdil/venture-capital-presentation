@@ -1,0 +1,12 @@
+{
+  "name": "venture-capital-presentation",
+  "version": "1.0.0",
+  "description": "Venture Capitalists (VC) 9-Slide Seminar Presentation Deck",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'No build step required for static HTML/CSS/JS presentation'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
