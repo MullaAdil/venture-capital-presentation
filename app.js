@@ -88,47 +88,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'intro_exact':
         return `
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; height: 100%;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%;">
             <div class="trio-card" style="padding: 14px; gap: 6px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">Introduction</h3>
-              ${data.introText.map(t => `<p style="font-size: 13.5px; color: #0F172A; line-height: 1.45; margin-bottom: 4px; font-weight: 600;">${t}</p>`).join('')}
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">Introduction</h3>
+              ${data.introText.map(t => `<p style="font-size: clamp(13.5px, 1.05vw, 17.5px); color: #0F172A; line-height: 1.45; margin-bottom: 4px; font-weight: 600;">${t}</p>`).join('')}
               
-              <h3 style="font-size: 16px; font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px; margin-top: 6px;">What is Venture Capital?</h3>
-              ${data.whatIsVC.map(t => `<p style="font-size: 13px; color: #0F172A; line-height: 1.4; margin-bottom: 3px;">• ${t}</p>`).join('')}
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px; margin-top: 6px;">What is Venture Capital?</h3>
+              ${data.whatIsVC.map(t => `<p style="font-size: clamp(13px, 1vw, 17px); color: #0F172A; line-height: 1.4; margin-bottom: 3px;">• ${t}</p>`).join('')}
             </div>
 
             <div class="trio-card" style="padding: 14px; gap: 6px; background: #FFF1F2; border: 1.5px solid #FECDD3;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px;">Who is a Venture Capitalist?</h3>
-              <p style="font-size: 13.5px; color: #0F172A; font-weight: 700;">${data.whoIsVC.def}</p>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px;">Who is a Venture Capitalist?</h3>
+              <p style="font-size: clamp(13.5px, 1.05vw, 17.5px); color: #0F172A; font-weight: 700;">${data.whoIsVC.def}</p>
               <div style="margin-top: 2px;">
-                <span style="font-size: 12.5px; font-weight: 800; color: #9F1239;">Apart from money, they also provide:</span>
-                ${data.whoIsVC.points.map(p => `<div style="font-size: 12.5px; color: #0F172A; margin-left: 8px; font-weight: 600;">• ${p}</div>`).join('')}
+                <span style="font-size: clamp(13px, 1vw, 17px); font-weight: 800; color: #9F1239;">Apart from money, they also provide:</span>
+                ${data.whoIsVC.points.map(p => `<div style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: #0F172A; margin-left: 8px; font-weight: 600;">• ${p}</div>`).join('')}
               </div>
 
-              <h3 style="font-size: 16px; font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px; margin-top: 6px;">History of Venture Capital</h3>
-              ${data.historyText.map(h => `<p style="font-size: 12.5px; color: #0F172A; line-height: 1.35; margin-bottom: 2px;">• ${h}</p>`).join('')}
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px; margin-top: 6px;">History of Venture Capital</h3>
+              ${data.historyText.map(h => `<p style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: #0F172A; line-height: 1.35; margin-bottom: 2px;">• ${h}</p>`).join('')}
             </div>
           </div>
         `;
 
       case 'need_features_exact':
         return `
-          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; height: 100%;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; width: 100%;">
             <div class="trio-card" style="padding: 14px; gap: 6px; background: #FFF1F2; border: 1.5px solid #FECDD3;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px;">Why is Venture Capital Needed?</h3>
-              <p style="font-size: 13px; font-weight: 800; color: #0F172A;">${data.whyNeeded.intro}</p>
-              ${data.whyNeeded.problems.map(p => `<div style="font-size: 13px; color: #9F1239; margin-left: 6px; font-weight: 700;">• ${p}</div>`).join('')}
-              <p style="font-size: 12.5px; color: #0F172A; margin-top: 6px; line-height: 1.4; font-weight: 600;">${data.whyNeeded.solution}</p>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #9F1239; border-bottom: 2px solid #FECDD3; padding-bottom: 4px;">Why is Venture Capital Needed?</h3>
+              <p style="font-size: clamp(13px, 1vw, 17px); font-weight: 800; color: #0F172A;">${data.whyNeeded.intro}</p>
+              ${data.whyNeeded.problems.map(p => `<div style="font-size: clamp(13px, 1vw, 17px); color: #9F1239; margin-left: 6px; font-weight: 700;">• ${p}</div>`).join('')}
+              <p style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: #0F172A; margin-top: 6px; line-height: 1.4; font-weight: 600;">${data.whyNeeded.solution}</p>
             </div>
 
             <div class="trio-card" style="padding: 14px; gap: 6px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">Features of Venture Capital</h3>
-              ${data.features.map(f => `<div style="font-size: 13px; color: #0F172A; margin-bottom: 4px; line-height: 1.35; font-weight: 600;">• ${f}</div>`).join('')}
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">Features of Venture Capital</h3>
+              ${data.features.map(f => `<div style="font-size: clamp(13px, 1vw, 17px); color: #0F172A; margin-bottom: 4px; line-height: 1.35; font-weight: 600;">• ${f}</div>`).join('')}
             </div>
 
             <div class="trio-card" style="padding: 14px; gap: 6px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #166534; border-bottom: 2px solid #BBF7D0; padding-bottom: 4px;">Objectives of Venture Capital</h3>
-              ${data.objectives.map(o => `<div style="font-size: 13px; color: #0F172A; margin-bottom: 4px; line-height: 1.35; font-weight: 600;">• ${o}</div>`).join('')}
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #166534; border-bottom: 2px solid #BBF7D0; padding-bottom: 4px;">Objectives of Venture Capital</h3>
+              ${data.objectives.map(o => `<div style="font-size: clamp(13px, 1vw, 17px); color: #0F172A; margin-bottom: 4px; line-height: 1.35; font-weight: 600;">• ${o}</div>`).join('')}
             </div>
           </div>
         `;
@@ -137,14 +137,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const pastelColors = ['#EFF6FF', '#F0FDF4', '#FFF1F2', '#EFF6FF', '#F0FDF4', '#FFF1F2', '#EFF6FF'];
         const borderColors = ['#BFDBFE', '#BBF7D0', '#FECDD3', '#BFDBFE', '#BBF7D0', '#FECDD3', '#BFDBFE'];
         return `
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <p style="font-size: 14.5px; font-weight: 800; color: var(--primary-blue);">${data.intro}</p>
+          <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
+            <p style="font-size: clamp(14.5px, 1.15vw, 19.5px); font-weight: 800; color: var(--primary-blue);">${data.intro}</p>
             <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;">
               ${data.steps.map((s, idx) => `
                 <div class="flow-step" style="padding: 10px; background: ${pastelColors[idx]}; border: 1.5px solid ${borderColors[idx]}; border-top: 5px solid var(--primary-blue);">
-                  <h4 style="font-size: 13.5px; font-weight: 800; color: var(--text-main); margin-bottom: 2px;">${s.step}</h4>
-                  <p style="font-size: 12px; color: var(--text-main); line-height: 1.35; font-weight: 600;">${s.desc}</p>
-                  ${s.points ? `<div style="margin-top: 4px;">${s.points.map(p => `<div style="font-size: 11px; color: var(--text-muted); font-weight: 700;">• ${p}</div>`).join('')}</div>` : ''}
+                  <h4 style="font-size: clamp(13.5px, 1.05vw, 17.5px); font-weight: 800; color: var(--text-main); margin-bottom: 2px;">${s.step}</h4>
+                  <p style="font-size: clamp(12px, 0.9vw, 15.5px); color: var(--text-main); line-height: 1.35; font-weight: 600;">${s.desc}</p>
+                  ${s.points ? `<div style="margin-top: 4px;">${s.points.map(p => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: var(--text-muted); font-weight: 700;">• ${p}</div>`).join('')}</div>` : ''}
                 </div>
               `).join('')}
             </div>
@@ -153,29 +153,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'stages_exact':
         return `
-          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px;">
+          <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 16px; width: 100%;">
             <div class="trio-card" style="padding: 14px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #1E3A8A; margin-bottom: 8px;">Funding Stages</h3>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #1E3A8A; margin-bottom: 8px;">Funding Stages</h3>
               <div style="display: flex; flex-direction: column; gap: 6px;">
                 ${data.stages.map(st => `
                   <div style="background: #FFF; padding: 6px 10px; border-radius: 6px; border-left: 4px solid var(--primary-blue); box-shadow: var(--shadow-sm);">
-                    <strong style="font-size: 13px; color: var(--text-main);">${st.name}:</strong> 
-                    <span style="font-size: 12.5px; color: var(--text-muted); font-weight: 600;">${st.desc}</span>
+                    <strong style="font-size: clamp(13.5px, 1.05vw, 17.5px); color: var(--text-main);">${st.name}:</strong> 
+                    <span style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: var(--text-muted); font-weight: 600;">${st.desc}</span>
                   </div>
                 `).join('')}
               </div>
             </div>
 
             <div class="trio-card" style="padding: 14px;">
-              <h3 style="font-size: 16px; font-weight: 800; color: var(--text-main); margin-bottom: 8px;">Venture Capital vs Angel Investor</h3>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: var(--text-main); margin-bottom: 8px;">Venture Capital vs Angel Investor</h3>
               <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
                 <div style="background: #FFF1F2; padding: 10px; border-radius: 8px; border: 1.5px solid #FECDD3;">
-                  <h4 style="font-size: 13.5px; font-weight: 800; color: #9F1239; margin-bottom: 6px;">Angel Investor</h4>
-                  ${data.vsAngel.angel.map(item => `<div style="font-size: 12.5px; color: #0F172A; margin-bottom: 4px; font-weight: 600;">• ${item}</div>`).join('')}
+                  <h4 style="font-size: clamp(13.5px, 1.05vw, 17.5px); font-weight: 800; color: #9F1239; margin-bottom: 6px;">Angel Investor</h4>
+                  ${data.vsAngel.angel.map(item => `<div style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: #0F172A; margin-bottom: 4px; font-weight: 600;">• ${item}</div>`).join('')}
                 </div>
                 <div style="background: #F0FDF4; padding: 10px; border-radius: 8px; border: 1.5px solid #BBF7D0;">
-                  <h4 style="font-size: 13.5px; font-weight: 800; color: #166534; margin-bottom: 6px;">Venture Capitalist</h4>
-                  ${data.vsAngel.vc.map(item => `<div style="font-size: 12.5px; color: #0F172A; margin-bottom: 4px; font-weight: 600;">• ${item}</div>`).join('')}
+                  <h4 style="font-size: clamp(13.5px, 1.05vw, 17.5px); font-weight: 800; color: #166534; margin-bottom: 6px;">Venture Capitalist</h4>
+                  ${data.vsAngel.vc.map(item => `<div style="font-size: clamp(12.5px, 0.95vw, 16.5px); color: #0F172A; margin-bottom: 4px; font-weight: 600;">• ${item}</div>`).join('')}
                 </div>
               </div>
             </div>
@@ -184,45 +184,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'risks_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <div class="trio-card" style="padding: 8px 12px; background: #FFF;">
-              <h3 style="font-size: 13.5px; font-weight: 800; color: var(--text-main); margin-bottom: 4px; border-bottom: 1.5px solid #E2E8F0; padding-bottom: 2px;">1. Venture Capital vs. Bank Loan Comparison</h3>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-                <div style="background: #EFF6FF; padding: 6px 10px; border-radius: 6px; border: 1px solid #BFDBFE;">
-                  <h4 style="font-size: 12.5px; font-weight: 800; color: #1E3A8A; margin-bottom: 2px;">Venture Capital</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.table[0].details.map(d => `<div style="font-size: 11px; color: #0F172A;"><strong style="color: #1E3A8A;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+          <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+            <div class="trio-card" style="padding: 12px 14px; background: #FFF;">
+              <h3 style="font-size: clamp(15px, 1.15vw, 20px); font-weight: 800; color: var(--text-main); margin-bottom: 6px; border-bottom: 1.5px solid #E2E8F0; padding-bottom: 2px;">1. Venture Capital vs. Bank Loan Comparison</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div style="background: #EFF6FF; padding: 8px 12px; border-radius: 6px; border: 1px solid #BFDBFE;">
+                  <h4 style="font-size: clamp(13.5px, 1vw, 17.5px); font-weight: 800; color: #1E3A8A; margin-bottom: 4px;">Venture Capital</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.table[0].details.map(d => `<div style="font-size: clamp(12px, 0.9vw, 15.5px); color: #0F172A;"><strong style="color: #1E3A8A;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
                   </div>
                 </div>
-                <div style="background: #FFF1F2; padding: 6px 10px; border-radius: 6px; border: 1px solid #FECDD3;">
-                  <h4 style="font-size: 12.5px; font-weight: 800; color: #9F1239; margin-bottom: 2px;">Bank Loan</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.table[1].details.map(d => `<div style="font-size: 11px; color: #0F172A;"><strong style="color: #9F1239;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+                <div style="background: #FFF1F2; padding: 8px 12px; border-radius: 6px; border: 1px solid #FECDD3;">
+                  <h4 style="font-size: clamp(13.5px, 1vw, 17.5px); font-weight: 800; color: #9F1239; margin-bottom: 4px;">Bank Loan</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.table[1].details.map(d => `<div style="font-size: clamp(12px, 0.9vw, 15.5px); color: #0F172A;"><strong style="color: #9F1239;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
                   </div>
                 </div>
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
-                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">2. Investment & Entrepreneur Risks</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px 12px;">
+                <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">2. Investment & Entrepreneur Risks</h4>
                 
-                <span style="font-size: 11px; font-weight: 800; color: #9F1239;">For Investors:</span>
-                <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; margin-top: 1px;">
-                  ${data.risks.investors.map(i => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #881337;">• ${i.title}:</strong> ${i.desc}</div>`).join('')}
+                <span style="font-size: clamp(12px, 0.9vw, 15.5px); font-weight: 800; color: #9F1239;">For Investors:</span>
+                <div style="display: flex; flex-direction: column; gap: 3px; margin-bottom: 4px; margin-top: 2px;">
+                  ${data.risks.investors.map(i => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${i.title}:</strong> ${i.desc}</div>`).join('')}
                 </div>
 
-                <span style="font-size: 11px; font-weight: 800; color: #9F1239;">For Entrepreneurs:</span>
-                <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 1px;">
-                  ${data.risks.entrepreneurs.map(e => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #881337;">• ${e.title}:</strong> ${e.desc}</div>`).join('')}
+                <span style="font-size: clamp(12px, 0.9vw, 15.5px); font-weight: 800; color: #9F1239;">For Entrepreneurs:</span>
+                <div style="display: flex; flex-direction: column; gap: 3px; margin-top: 2px;">
+                  ${data.risks.entrepreneurs.map(e => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${e.title}:</strong> ${e.desc}</div>`).join('')}
                 </div>
               </div>
 
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
-                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">3. What Happens If a Startup Fails?</h4>
-                <p style="font-size: 11px; font-weight: 800; color: #9F1239; margin-bottom: 3px;">${data.failure.intro}</p>
-                <div style="display: flex; flex-direction: column; gap: 3px;">
-                  ${data.failure.points.map(f => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${f.title}:</strong> ${f.desc}</div>`).join('')}
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px 12px;">
+                <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">3. What Happens If a Startup Fails?</h4>
+                <p style="font-size: clamp(12px, 0.9vw, 15.5px); font-weight: 800; color: #9F1239; margin-bottom: 4px;">${data.failure.intro}</p>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                  ${data.failure.points.map(f => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.35;"><strong style="color: #881337;">• ${f.title}:</strong> ${f.desc}</div>`).join('')}
                 </div>
               </div>
             </div>
@@ -231,38 +231,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'india_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 8px;">
-            <p style="font-size: 13px; font-weight: 700; color: var(--primary-blue); margin-bottom: 2px;">${data.subtitle}</p>
+          <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
+            <p style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 700; color: var(--primary-blue); margin-bottom: 2px;">🇮🇳 ${data.subtitle}</p>
             
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div class="trio-card" style="padding: 8px 10px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Government Initiatives</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.govt.map(g => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #14532D;">• ${g.name}:</strong> ${g.desc}</div>`).join('')}
+                <div class="trio-card" style="padding: 10px 12px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
+                  <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Government Initiatives</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.govt.map(g => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #14532D;">• ${g.name}:</strong> ${g.desc}</div>`).join('')}
                   </div>
                 </div>
 
-                <div class="trio-card" style="padding: 8px 10px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Major Investment Sectors</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.sectors.map(s => `<div style="font-size: 10px; color: #0F172A; line-height: 1.2;"><strong style="color: #14532D;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
+                <div class="trio-card" style="padding: 10px 12px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
+                  <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Major Investment Sectors</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.sectors.map(s => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #14532D;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
                   </div>
                 </div>
               </div>
 
               <div style="display: flex; flex-direction: column; gap: 8px;">
-                <div class="trio-card" style="padding: 8px 10px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Top Venture Capital Firms in India</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.topVCs.map(v => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #1E3A8A;">• ${v.name}:</strong> ${v.desc}</div>`).join('')}
+                <div class="trio-card" style="padding: 10px 12px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
+                  <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Top Venture Capital Firms in India</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.topVCs.map(v => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #1E3A8A;">• ${v.name}:</strong> ${v.desc}</div>`).join('')}
                   </div>
                 </div>
 
-                <div class="trio-card" style="padding: 8px 10px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Famous VC-Funded Indian Startups</h4>
-                  <div style="display: flex; flex-direction: column; gap: 2px;">
-                    ${data.famousStartups.map(s => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #1E3A8A;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
+                <div class="trio-card" style="padding: 10px 12px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
+                  <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Famous VC-Funded Indian Startups</h4>
+                  <div style="display: flex; flex-direction: column; gap: 3px;">
+                    ${data.famousStartups.map(s => `<div style="font-size: clamp(11.5px, 0.85vw, 15px); color: #0F172A; line-height: 1.3;"><strong style="color: #1E3A8A;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
                   </div>
                 </div>
               </div>
@@ -272,21 +272,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'case_realtime':
         return `
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; height: 100%;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; width: 100%;">
             <div class="trio-card" style="padding: 14px; gap: 8px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">1. Real-Life Conceptual Example</h3>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #1E3A8A; border-bottom: 2px solid #BFDBFE; padding-bottom: 4px;">1. Real-Life Conceptual Example</h3>
               ${data.farmingExample.map((p, idx) => `
-                <div style="background: ${idx === 4 ? '#DCFCE7' : '#FFF'}; border-left: 4px solid ${idx === 4 ? '#166534' : 'var(--primary-blue)'}; padding: 6px 10px; border-radius: 6px; box-shadow: var(--shadow-sm);">
-                  <p style="font-size: 12.5px; color: ${idx === 4 ? '#14532D' : 'var(--text-main)'}; font-weight: ${idx === 4 ? '800' : '600'}; line-height: 1.35;">• ${p}</p>
+                <div style="background: ${idx === 4 ? '#DCFCE7' : '#FFF'}; border-left: 4px solid ${idx === 4 ? '#166534' : 'var(--primary-blue)'}; padding: 8px 12px; border-radius: 6px; box-shadow: var(--shadow-sm);">
+                  <p style="font-size: clamp(13px, 1vw, 17px); color: ${idx === 4 ? '#14532D' : 'var(--text-main)'}; font-weight: ${idx === 4 ? '800' : '600'}; line-height: 1.4;">• ${p}</p>
                 </div>
               `).join('')}
             </div>
 
             <div class="trio-card" style="padding: 14px; gap: 8px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
-              <h3 style="font-size: 16px; font-weight: 800; color: #166534; border-bottom: 2px solid #BBF7D0; padding-bottom: 4px;">2. ${data.realCompanyExample.name}</h3>
+              <h3 style="font-size: clamp(16px, 1.25vw, 22px); font-weight: 800; color: #166534; border-bottom: 2px solid #BBF7D0; padding-bottom: 4px;">2. ${data.realCompanyExample.name}</h3>
               ${data.realCompanyExample.points.map((pt, idx) => `
-                <div style="background: #FFF; padding: 8px 10px; border-radius: 6px; box-shadow: var(--shadow-sm);">
-                  <p style="font-size: 12.5px; color: var(--text-main); line-height: 1.4; font-weight: ${idx === 3 ? '800' : '600'};">★ ${pt}</p>
+                <div style="background: #FFF; padding: 8px 12px; border-radius: 6px; box-shadow: var(--shadow-sm);">
+                  <p style="font-size: clamp(13px, 1vw, 17px); color: var(--text-main); line-height: 1.4; font-weight: ${idx === 3 ? '800' : '600'};">★ ${pt}</p>
                 </div>
               `).join('')}
             </div>
@@ -295,27 +295,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'conclusion_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 8px;">
+          <div style="display: flex; flex-direction: column; gap: 10px; width: 100%;">
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-              <div style="background: #F0FDF4; border: 1.5px solid #BBF7D0; border-radius: 8px; padding: 8px 10px;">
-                <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Advantages of Venture Capital</h4>
-                <div style="display: flex; flex-direction: column; gap: 2.5px;">
-                  ${data.advantages.map(a => `<div style="font-size: 11px; color: #0F172A; line-height: 1.3;"><strong style="color: #14532D;">• ${a.title}:</strong> ${a.desc}</div>`).join('')}
+              <div style="background: #F0FDF4; border: 1.5px solid #BBF7D0; border-radius: 8px; padding: 10px 12px;">
+                <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 4px; margin-bottom: 6px;">Advantages of Venture Capital</h4>
+                <div style="display: flex; flex-direction: column; gap: 3.5px;">
+                  ${data.advantages.map(a => `<div style="font-size: clamp(12px, 0.9vw, 15.5px); color: #0F172A; line-height: 1.35;"><strong style="color: #14532D;">• ${a.title}:</strong> ${a.desc}</div>`).join('')}
                 </div>
               </div>
 
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
-                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; border-bottom: 1px solid #FECDD3; padding-bottom: 2px; margin-bottom: 4px;">Disadvantages of Venture Capital</h4>
-                <div style="display: flex; flex-direction: column; gap: 2.5px;">
-                  ${data.disadvantages.map(d => `<div style="font-size: 11px; color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px 12px;">
+                <h4 style="font-size: clamp(14px, 1.05vw, 18px); font-weight: 800; color: #9F1239; border-bottom: 1px solid #FECDD3; padding-bottom: 4px; margin-bottom: 6px;">Disadvantages of Venture Capital</h4>
+                <div style="display: flex; flex-direction: column; gap: 3.5px;">
+                  ${data.disadvantages.map(d => `<div style="font-size: clamp(12px, 0.9vw, 15.5px); color: #0F172A; line-height: 1.35;"><strong style="color: #881337;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
                 </div>
               </div>
             </div>
 
-            <div style="background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #0F172A; padding: 10px 14px; border-radius: 10px; text-align: center; box-shadow: var(--shadow-sm);">
-              <h3 style="color: #1D4ED8; font-size: 15px; font-weight: 800; margin-bottom: 2px;">Conclusion</h3>
-              <p style="font-size: 11.5px; line-height: 1.45; color: #0F172A; font-weight: 600;">${data.conclusionText}</p>
-              <div style="margin-top: 4px; font-size: 16px; font-weight: 800; color: #15803D;">${data.thankYou}</div>
+            <div style="background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #0F172A; padding: 12px 16px; border-radius: 10px; text-align: center; box-shadow: var(--shadow-sm);">
+              <h3 style="color: #1D4ED8; font-size: clamp(16px, 1.25vw, 21px); font-weight: 800; margin-bottom: 4px;">Conclusion</h3>
+              <p style="font-size: clamp(12.5px, 0.95vw, 16px); line-height: 1.45; color: #0F172A; font-weight: 600;">${data.conclusionText}</p>
+              <div style="margin-top: 6px; font-size: clamp(17px, 1.3vw, 23px); font-weight: 800; color: #15803D;">${data.thankYou}</div>
             </div>
           </div>
         `;

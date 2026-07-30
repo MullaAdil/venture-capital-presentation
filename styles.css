@@ -172,18 +172,18 @@ body {
 }
 
 .slide-title-block {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .slide-title {
-  font-size: 28px;
+  font-size: clamp(26px, 2.2vw, 38px);
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.2;
 }
 
 .slide-subtitle {
-  font-size: 14px;
+  font-size: clamp(14px, 1.1vw, 20px);
   color: var(--primary-blue);
   font-weight: 700;
   margin-top: 2px;
@@ -193,10 +193,28 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
+  padding-right: 6px;
+  min-height: 0;
+}
+
+/* Custom presentation scrollbar */
+.slide-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.slide-content::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 4px;
+}
+
+.slide-content::-webkit-scrollbar-thumb {
+  background: rgba(37, 99, 235, 0.25);
+  border-radius: 4px;
 }
 
 .slide-enter {
@@ -222,6 +240,9 @@ body {
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
 }
 
 /* Formal Title Slide Layout */
