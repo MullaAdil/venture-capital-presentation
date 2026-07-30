@@ -409,22 +409,56 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Touch Swipe Gesture Support
-  let touchStartX = 0;
-  let touchEndX = 0;
+  // Touch & Pointer Swipe Gesture Support for Mobile & CandyPop Digital Whiteboards
+  let startX = 0;
+  let startY = 0;
+  let isPointerDown = false;
 
-  document.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  }, false);
+  const stageContainer = document.getElementById('slideStage') || document.body;
 
-  document.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  }, false);
+  // Touch Event Handlers (Finger / Hand Swiping)
+  stageContainer.addEventListener('touchstart', (e) => {
+    if (e.touches.length === 1) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }
+  }, { passive: true });
 
-  function handleSwipe() {
-    if (touchEndX < touchStartX - 50) nextSlide();
-    if (touchEndX > touchStartX + 50) prevSlide();
+  stageContainer.addEventListener('touchend', (e) => {
+    if (e.changedTouches.length === 1) {
+      const endX = e.changedTouches[0].clientX;
+      const endY = e.changedTouches[0].clientY;
+      handleSwipeGesture(startX, startY, endX, endY);
+    }
+  }, { passive: true });
+
+  // Pointer Event Handlers (Digital Stylus / Interactive Board Touch)
+  stageContainer.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'pen' || e.pointerType === 'touch') {
+      isPointerDown = true;
+      startX = e.clientX;
+      startY = e.clientY;
+    }
+  }, { passive: true });
+
+  stageContainer.addEventListener('pointerup', (e) => {
+    if (isPointerDown) {
+      isPointerDown = false;
+      handleSwipeGesture(startX, startY, e.clientX, e.clientY);
+    }
+  }, { passive: true });
+
+  function handleSwipeGesture(sX, sY, eX, eY) {
+    const diffX = eX - sX;
+    const diffY = eY - sY;
+    // Trigger slide change if horizontal swipe distance > 40px and dominant over vertical shift
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.2) {
+      if (diffX < 0) {
+        nextSlide();
+      } else {
+        prevSlide();
+      }
+    }
   }
 
   // Progress Bar Click Handler
