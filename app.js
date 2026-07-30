@@ -184,32 +184,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'risks_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div class="trio-card" style="padding: 10px;">
-              <h3 style="font-size: 15px; font-weight: 800; color: var(--text-main); margin-bottom: 4px;">Venture Capital vs Bank Loan</h3>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-                <div style="background: #EFF6FF; padding: 8px 12px; border-radius: 6px; border: 1px solid #BFDBFE;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #1E3A8A;">Venture Capital</h4>
-                  <div style="font-size: 12px; font-weight: 600; color: #0F172A;">• ${data.table[0].val1} • ${data.table[0].val2} • ${data.table[0].val3} • ${data.table[0].val4}</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div class="trio-card" style="padding: 8px 12px; background: #FFF;">
+              <h3 style="font-size: 13.5px; font-weight: 800; color: var(--text-main); margin-bottom: 4px; border-bottom: 1.5px solid #E2E8F0; padding-bottom: 2px;">1. Venture Capital vs. Bank Loan Comparison</h3>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                <div style="background: #EFF6FF; padding: 6px 10px; border-radius: 6px; border: 1px solid #BFDBFE;">
+                  <h4 style="font-size: 12.5px; font-weight: 800; color: #1E3A8A; margin-bottom: 2px;">Venture Capital</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.table[0].details.map(d => `<div style="font-size: 11px; color: #0F172A;"><strong style="color: #1E3A8A;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+                  </div>
                 </div>
-                <div style="background: #FFF1F2; padding: 8px 12px; border-radius: 6px; border: 1px solid #FECDD3;">
-                  <h4 style="font-size: 13px; font-weight: 800; color: #9F1239;">Bank Loan</h4>
-                  <div style="font-size: 12px; font-weight: 600; color: #0F172A;">• ${data.table[1].val1} • ${data.table[1].val2} • ${data.table[1].val3} • ${data.table[1].val4}</div>
+                <div style="background: #FFF1F2; padding: 6px 10px; border-radius: 6px; border: 1px solid #FECDD3;">
+                  <h4 style="font-size: 12.5px; font-weight: 800; color: #9F1239; margin-bottom: 2px;">Bank Loan</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.table[1].details.map(d => `<div style="font-size: 11px; color: #0F172A;"><strong style="color: #9F1239;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #9F1239; margin-bottom: 4px;">Risks</h4>
-                <div style="font-size: 12px; color: #0F172A; font-weight: 600;"><strong>For Investors:</strong> ${data.risks.investors.join(' • ')}</div>
-                <div style="font-size: 12px; color: #0F172A; margin-top: 4px; font-weight: 600;"><strong>For Entrepreneurs:</strong> ${data.risks.entrepreneurs.join(' • ')}</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
+                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">2. Investment & Entrepreneur Risks</h4>
+                
+                <span style="font-size: 11px; font-weight: 800; color: #9F1239;">For Investors:</span>
+                <div style="display: flex; flex-direction: column; gap: 2px; margin-bottom: 4px; margin-top: 1px;">
+                  ${data.risks.investors.map(i => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #881337;">• ${i.title}:</strong> ${i.desc}</div>`).join('')}
+                </div>
+
+                <span style="font-size: 11px; font-weight: 800; color: #9F1239;">For Entrepreneurs:</span>
+                <div style="display: flex; flex-direction: column; gap: 2px; margin-top: 1px;">
+                  ${data.risks.entrepreneurs.map(e => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #881337;">• ${e.title}:</strong> ${e.desc}</div>`).join('')}
+                </div>
               </div>
 
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #9F1239; margin-bottom: 4px;">What Happens if a Startup Fails?</h4>
-                <p style="font-size: 11.5px; font-weight: 800; color: #9F1239;">${data.failure.intro}</p>
-                ${data.failure.points.map(f => `<div style="font-size: 11.5px; color: #0F172A; margin-top: 2px; font-weight: 600;">• ${f}</div>`).join('')}
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
+                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; margin-bottom: 4px; border-bottom: 1px solid #FECDD3; padding-bottom: 2px;">3. What Happens If a Startup Fails?</h4>
+                <p style="font-size: 11px; font-weight: 800; color: #9F1239; margin-bottom: 3px;">${data.failure.intro}</p>
+                <div style="display: flex; flex-direction: column; gap: 3px;">
+                  ${data.failure.points.map(f => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${f.title}:</strong> ${f.desc}</div>`).join('')}
+                </div>
               </div>
             </div>
           </div>
@@ -217,25 +231,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'india_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <p style="font-size: 14px; font-weight: 700; color: var(--primary-blue);">${data.subtitle}</p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <p style="font-size: 13px; font-weight: 700; color: var(--primary-blue); margin-bottom: 2px;">${data.subtitle}</p>
             
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <div class="trio-card" style="padding: 10px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #166534;">Government Initiatives</h4>
-                ${data.govt.map(g => `<div style="font-size: 12.5px; color: #0F172A; margin-top: 2px; font-weight: 600;">• ${g}</div>`).join('')}
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="trio-card" style="padding: 8px 10px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
+                  <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Government Initiatives</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.govt.map(g => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #14532D;">• ${g.name}:</strong> ${g.desc}</div>`).join('')}
+                  </div>
+                </div>
 
-                <h4 style="font-size: 14px; font-weight: 800; color: #166534; margin-top: 8px;">Major Investment Sectors</h4>
-                <div style="font-size: 12px; font-weight: 700; color: #0F172A;">${data.sectors.join(' • ')}</div>
+                <div class="trio-card" style="padding: 8px 10px; background: #F0FDF4; border: 1.5px solid #BBF7D0;">
+                  <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Major Investment Sectors</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.sectors.map(s => `<div style="font-size: 10px; color: #0F172A; line-height: 1.2;"><strong style="color: #14532D;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
+                  </div>
+                </div>
               </div>
 
-              <div class="trio-card" style="padding: 10px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #1E3A8A;">Top Venture Capital Firms</h4>
-                <div style="font-size: 12.5px; color: #0F172A; margin-bottom: 6px; font-weight: 600;">${data.topVCs.join(' • ')}</div>
+              <div style="display: flex; flex-direction: column; gap: 8px;">
+                <div class="trio-card" style="padding: 8px 10px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
+                  <h4 style="font-size: 13px; font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Top Venture Capital Firms in India</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.topVCs.map(v => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #1E3A8A;">• ${v.name}:</strong> ${v.desc}</div>`).join('')}
+                  </div>
+                </div>
 
-                <h4 style="font-size: 14px; font-weight: 800; color: #1E3A8A; margin-top: 6px;">Famous Indian Startups Funded by VC</h4>
-                <div style="display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px;">
-                  ${data.famousStartups.map(s => `<span style="background: #FFF; color: #1E3A8A; font-weight: 800; font-size: 12px; padding: 4px 10px; border-radius: 6px; border: 1.5px solid #BFDBFE;">${s}</span>`).join('')}
+                <div class="trio-card" style="padding: 8px 10px; background: #EFF6FF; border: 1.5px solid #BFDBFE;">
+                  <h4 style="font-size: 13px; font-weight: 800; color: #1E3A8A; border-bottom: 1px solid #BFDBFE; padding-bottom: 2px; margin-bottom: 4px;">Famous VC-Funded Indian Startups</h4>
+                  <div style="display: flex; flex-direction: column; gap: 2px;">
+                    ${data.famousStartups.map(s => `<div style="font-size: 10.5px; color: #0F172A; line-height: 1.25;"><strong style="color: #1E3A8A;">• ${s.name}:</strong> ${s.desc}</div>`).join('')}
+                  </div>
                 </div>
               </div>
             </div>
@@ -267,23 +295,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
       case 'conclusion_exact':
         return `
-          <div style="display: flex; flex-direction: column; gap: 10px;">
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
-              <div style="background: #F0FDF4; border: 1.5px solid #BBF7D0; border-radius: 8px; padding: 10px;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #166534; margin-bottom: 4px;">Advantages</h4>
-                ${data.advantages.map(a => `<div style="font-size: 12.5px; color: #14532D; margin-bottom: 2px; font-weight: 600;">• ${a}</div>`).join('')}
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+              <div style="background: #F0FDF4; border: 1.5px solid #BBF7D0; border-radius: 8px; padding: 8px 10px;">
+                <h4 style="font-size: 13px; font-weight: 800; color: #166534; border-bottom: 1px solid #BBF7D0; padding-bottom: 2px; margin-bottom: 4px;">Advantages of Venture Capital</h4>
+                <div style="display: flex; flex-direction: column; gap: 2.5px;">
+                  ${data.advantages.map(a => `<div style="font-size: 11px; color: #0F172A; line-height: 1.3;"><strong style="color: #14532D;">• ${a.title}:</strong> ${a.desc}</div>`).join('')}
+                </div>
               </div>
 
-              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 10px;">
-                <h4 style="font-size: 14px; font-weight: 800; color: #9F1239; margin-bottom: 4px;">Disadvantages</h4>
-                ${data.disadvantages.map(d => `<div style="font-size: 12.5px; color: #881337; margin-bottom: 2px; font-weight: 600;">• ${d}</div>`).join('')}
+              <div style="background: #FFF1F2; border: 1.5px solid #FECDD3; border-radius: 8px; padding: 8px 10px;">
+                <h4 style="font-size: 13px; font-weight: 800; color: #9F1239; border-bottom: 1px solid #FECDD3; padding-bottom: 2px; margin-bottom: 4px;">Disadvantages of Venture Capital</h4>
+                <div style="display: flex; flex-direction: column; gap: 2.5px;">
+                  ${data.disadvantages.map(d => `<div style="font-size: 11px; color: #0F172A; line-height: 1.3;"><strong style="color: #881337;">• ${d.title}:</strong> ${d.desc}</div>`).join('')}
+                </div>
               </div>
             </div>
 
-            <div style="background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #0F172A; padding: 18px; border-radius: 12px; text-align: center; box-shadow: var(--shadow-sm);">
-              <h3 style="color: #1D4ED8; font-size: 19px; font-weight: 800; margin-bottom: 6px;">Conclusion</h3>
-              <p style="font-size: 13.5px; line-height: 1.55; color: #0F172A; font-weight: 600;">${data.conclusionText}</p>
-              <div style="margin-top: 10px; font-size: 20px; font-weight: 800; color: #15803D;">${data.thankYou}</div>
+            <div style="background: #EFF6FF; border: 1.5px solid #BFDBFE; color: #0F172A; padding: 10px 14px; border-radius: 10px; text-align: center; box-shadow: var(--shadow-sm);">
+              <h3 style="color: #1D4ED8; font-size: 15px; font-weight: 800; margin-bottom: 2px;">Conclusion</h3>
+              <p style="font-size: 11.5px; line-height: 1.45; color: #0F172A; font-weight: 600;">${data.conclusionText}</p>
+              <div style="margin-top: 4px; font-size: 16px; font-weight: 800; color: #15803D;">${data.thankYou}</div>
             </div>
           </div>
         `;
