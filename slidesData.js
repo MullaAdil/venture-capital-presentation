@@ -132,40 +132,41 @@ const slidesData = [
       {
         param: "Venture Capital",
         details: [
-          { title: "Equity Ownership", desc: "Capital given for company shares, not debt." },
-          { title: "Zero EMI", desc: "No fixed monthly repayments or interest fees." },
-          { title: "Shared Control", desc: "Founders share equity and board decision rights." },
-          { title: "Strategic Mentorship", desc: "Active business guidance & networking included." }
+          { title: "Equity investment", desc: "Capital given in exchange for company ownership share rather than debt." },
+          { title: "No EMI required", desc: "No fixed monthly repayments or interest obligations regardless of profit." },
+          { title: "Ownership shared", desc: "Founders surrender equity stake and share company control with investor partners." },
+          { title: "Strategic support", desc: "Active business guidance, industry connections, and mentorship provided." }
         ]
       },
       {
         param: "Bank Loan",
         details: [
-          { title: "Debt Financing", desc: "Borrowed money requiring 100% repayment." },
-          { title: "Mandatory EMI", desc: "Strict monthly interest & principal payments." },
-          { title: "100% Ownership", desc: "Founder retains full company ownership." },
-          { title: "No Growth Advice", desc: "Bank provides money only; zero mentorship." }
+          { title: "Debt financing", desc: "Borrowed money with strict interest rates and full principal repayment terms." },
+          { title: "Mandatory EMI", desc: "Regular monthly payments required regardless of business profits or losses." },
+          { title: "100% ownership kept", desc: "Founder retains full company ownership, equity, and independent decision authority." },
+          { title: "No business support", desc: "Banks provide money only; no strategic advice, networking, or mentorship." }
         ]
       }
     ],
     risks: {
       investors: [
-        { title: "90% Startup Failure Rate", desc: "High potential for total loss of invested capital." },
-        { title: "Market Competition", desc: "Fast technological shifts can make startups obsolete." },
-        { title: "7–10 Year Illiquidity", desc: "Capital is locked in private shares before exit." }
+        { title: "Startup Failure Risk", desc: "Over 90% of early-stage startups fail, resulting in total loss of invested capital." },
+        { title: "Market & Tech Competition", desc: "Rival companies or fast technological changes can render the business obsolete." },
+        { title: "Illiquidity & Long Gestation", desc: "Capital is locked in private shares for 7–10 years before any profitable exit opportunity." }
       ],
       entrepreneurs: [
-        { title: "Equity Dilution", desc: "Founders lose percentage of company ownership." },
-        { title: "10x–100x Growth Pressure", desc: "VCs demand aggressive revenue targets." },
-        { title: "Board Control", desc: "Investors gain veto power over key decisions." }
+        { title: "Loss of Ownership & Dilution", desc: "Selling equity dilutes the founders' control and equity stake in the company." },
+        { title: "High Investor Growth Pressure", desc: "VCs demand 10x-100x financial returns, pushing founders toward aggressive targets." },
+        { title: "Board Control & Conflicts", desc: "Investors secure board representation and veto rights, restricting founder autonomy." }
       ]
     },
     failure: {
-      intro: "What Happens When a Startup Fails?",
+      intro: "Key consequences when a VC-backed startup fails:",
       points: [
-        { title: "VC Absorbs Loss", desc: "VC loses equity investment without personal collateral." },
-        { title: "No Founder Debt", desc: "Founders do not repay equity money from personal savings." },
-        { title: "Closure & Layoffs", desc: "Operations cease and assets are liquidated to debt holders." }
+        { title: "VC Absorbs Capital Loss", desc: "The venture capital firm loses its entire equity investment without collateral recourse." },
+        { title: "No Personal Liability for Founders", desc: "Founders do not repay equity money because equity carries risk, unlike bank debt." },
+        { title: "Workforce Layoffs & Closure", desc: "Operations cease, leading to employee layoffs and workplace shutdown." },
+        { title: "Asset Liquidation & Distribution", desc: "Remaining physical assets and patents are sold off to satisfy outstanding debt creditors." }
       ]
     }
   },
@@ -174,35 +175,36 @@ const slidesData = [
     slideNumber: "07",
     tag: "Indian Ecosystem",
     title: "Venture Capital in India",
-    subtitle: "India is the 3rd Largest Startup Ecosystem Worldwide",
+    subtitle: "India is one of the fastest-growing startup ecosystems worldwide.",
     layout: "india_exact",
     govt: [
-      { name: "Startup India", desc: "Tax exemptions & simplified compliance" },
-      { name: "Digital India", desc: "High-speed digital UPI & internet connectivity" },
-      { name: "Atal Innovation Mission", desc: "Incubators & tinkering labs nationwide" },
-      { name: "FFS Scheme", desc: "₹10,000 Crore SIDBI fund injection" }
+      { name: "Startup India", desc: "Provides tax exemptions, fast-track patent filings, and simplified compliance for startups." },
+      { name: "Digital India", desc: "Expands nationwide high-speed internet and digital infrastructure to support tech startups." },
+      { name: "Atal Innovation Mission", desc: "Establishes world-class incubators, tinkering labs, and innovation hubs across educational institutions." },
+      { name: "Fund of Funds for Startups (FFS)", desc: "₹10,000 Crore government corpus managed by SIDBI to inject capital into registered VCs." }
     ],
     sectors: [
-      "Artificial Intelligence (AI)",
-      "FinTech & UPI Payments",
-      "HealthTech & Telemedicine",
-      "EdTech & Upskilling",
-      "Electric Vehicles (EV)",
-      "SaaS & Enterprise Cloud"
+      { name: "Artificial Intelligence (AI)", desc: "Building generative models, predictive analytics, and automated enterprise tools." },
+      { name: "FinTech", desc: "Revolutionizing digital payments via UPI, neo-banking, and micro-lending platforms." },
+      { name: "HealthTech", desc: "Providing online telemedicine, AI diagnostic tools, and accessible digital healthcare." },
+      { name: "EdTech", desc: "Enabling interactive online education, skill upskilling platforms, and competitive exam preparation." },
+      { name: "AgriTech", desc: "Optimizing supply chain logistics, IoT soil sensors, and direct farm-to-consumer platforms." },
+      { name: "Electric Vehicles (EV)", desc: "Building battery swapping networks, EV manufacturing, and clean green mobility solutions." },
+      { name: "SaaS (Software as a Service)", desc: "Developing cloud-based enterprise software built in India for global customers." }
     ],
     topVCs: [
-      { name: "Peak XV Partners", desc: "Leading multi-stage tech investor (formerly Sequoia India)" },
-      { name: "Accel India", desc: "Early-stage backer of Flipkart & Swiggy" },
-      { name: "Kalaari Capital", desc: "Early fund for e-commerce & consumer tech" },
-      { name: "Blume Ventures", desc: "Prominent seed fund for Indian tech founders" },
-      { name: "Nexus Venture Partners", desc: "Indo-US fund for global enterprise software" }
+      { name: "Peak XV Partners", desc: "Formerly Sequoia India; leading multi-stage VC firm backing iconic tech unicorns." },
+      { name: "Accel India", desc: "Renowned early-stage investor behind global giants like Flipkart, Swiggy, and Freshworks." },
+      { name: "Kalaari Capital", desc: "Early-stage fund focusing on consumer internet, e-commerce, and deep tech innovations." },
+      { name: "Blume Ventures", desc: "Prominent seed and pre-Series A fund empowering home-grown Indian tech startups." },
+      { name: "Nexus Venture Partners", desc: "Pioneering Indo-US venture firm supporting enterprise software, AI, and commercial tech." }
     ],
     famousStartups: [
-      { name: "Flipkart", desc: "E-commerce giant acquired by Walmart for $16 Billion" },
-      { name: "Swiggy", desc: "On-demand food & quick commerce delivery leader" },
-      { name: "Zomato", desc: "Food tech unicorn listed on public stock exchanges" },
-      { name: "Ola", desc: "Mobility & EV electric transit pioneer" },
-      { name: "Meesho", desc: "Social commerce platform empowering local sellers" }
+      { name: "Flipkart", desc: "E-commerce pioneer backed by Accel & SoftBank, acquired by Walmart for $16 Billion." },
+      { name: "Ola", desc: "Mobility and EV leader transforming urban ride-hailing and clean transit across India." },
+      { name: "Swiggy", desc: "On-demand food delivery and quick-commerce innovator with Instamart grocery delivery." },
+      { name: "Zomato", desc: "Food delivery & restaurant discovery marketplace successfully listed on public stock exchanges." },
+      { name: "Meesho", desc: "Social commerce platform democratizing online selling for millions of small businesses." }
     ]
   },
   {
@@ -213,18 +215,19 @@ const slidesData = [
     subtitle: "How VC Funding Transformed Small Ideas into Household Brands",
     layout: "case_realtime",
     farmingExample: [
-      "Four students build an AI farming app needing ₹50 Lakhs capital.",
-      "A VC firm invests ₹50 Lakhs in exchange for 20% company equity.",
-      "The startup scales aggressively and becomes worth ₹100 Crores.",
-      "The VC's 20% stake is now worth ₹20 Crores (40x return), while founders own 80% of a massive business."
+      "Suppose four engineering students develop an AI-based farming application.",
+      "They need ₹50 lakh to develop the product.",
+      "A venture capital firm invests ₹50 lakh in exchange for 20% equity.",
+      "The startup grows successfully and becomes worth ₹100 crore.",
+      "The VC’s 20% ownership is now worth ₹20 crore, while the founders still own most of a much larger company."
     ],
     realCompanyExample: {
-      name: "Flipkart (Real-World Case Study)",
+      name: "Flipkart (Real-Time Major Brand Case)",
       points: [
-        "Started in 2007 in a Bengaluru apartment with ₹4 Lakhs personal savings as an online bookstore.",
-        "In 2009, Accel India invested $1M (₹4.5 Crores) when traditional banks refused loans.",
-        "Scaled Cash-on-Delivery, nationwide logistics & e-commerce market dominance.",
-        "In 2018, Walmart acquired Flipkart for $16 Billion — yielding a 300x return for early VC Accel!"
+        "Initial Startup (2007): Started in a 2BHK apartment in Bengaluru by Sachin & Binny Bansal as an online bookstore with ₹4 Lakhs personal savings.",
+        "VC Funding Boost (2009): Accel India invested $1 Million (₹4.5 Crores) when traditional banks refused loans. Later, Tiger Global & SoftBank backed them.",
+        "Growth to Major Brand: Built nationwide logistics, Cash-on-Delivery, and expanded across e-commerce categories.",
+        "Landmark Exit (2018): Walmart acquired a controlling stake for $16 Billion (₹1.1 Lakh Crores) — giving early VC Accel a 300x Return on Investment!"
       ]
     }
   },
@@ -236,18 +239,19 @@ const slidesData = [
     subtitle: "Enterprise and Venture Creation (EVC)",
     layout: "conclusion_exact",
     advantages: [
-      { title: "Substantial Capital Access", desc: "Large-scale growth funding without monthly interest repayments or personal debt liability." },
-      { title: "Strategic Mentorship", desc: "Expert business guidance, board leadership, and operational scaling advice." },
-      { title: "Accelerated Growth", desc: "Enables rapid market expansion, top-tier hiring, and aggressive brand marketing." },
-      { title: "Credibility & Trust", desc: "VC backing validates the startup, attracting customers, talent, and corporate partners." }
+      { title: "Substantial Capital Access", desc: "Provides large-scale growth funding without monthly interest payments or collateral debt." },
+      { title: "Strategic Mentorship", desc: "VC partners bring experienced business guidance, board leadership, and operational advice." },
+      { title: "Accelerated Scaling", desc: "Enables rapid market expansion, aggressive marketing campaigns, and top-tier hiring." },
+      { title: "Strong Industry Connections", desc: "Unlocks valuable corporate partnerships, key enterprise clients, and future funding networks." },
+      { title: "Increased Credibility & Trust", desc: "VC backing serves as a strong stamp of validation, boosting market reputation and customer trust." }
     ],
     disadvantages: [
-      { title: "Equity & Control Loss", desc: "Founders give up equity ownership stake and share board decision control." },
-      { title: "10x-100x Return Pressure", desc: "VCs demand high-speed hyper-growth and aggressive revenue milestones." },
-      { title: "Complex 6–12 Month Process", desc: "Pitching, due diligence, and contract negotiations require intense effort." },
-      { title: "Risk of Founder Replacement", desc: "Underperforming founders may be replaced by professional CEOs chosen by VCs." }
+      { title: "Equity & Ownership Loss", desc: "Founders must give up significant equity ownership shares and dilute future profits." },
+      { title: "High Investor Return Expectations", desc: "VCs demand 10x-100x financial returns, placing immense performance pressure on founders." },
+      { title: "Difficult & Lengthy Process", desc: "Pitching, due diligence, and deal negotiation can take 6-12 months of intense effort." },
+      { title: "Pressure to Grow Quickly", desc: "Forces startups to prioritize aggressive hyper-scaling over organic, gradual development." }
     ],
-    conclusionText: "Venture capital is a powerful catalyst for high-growth startups. Beyond money, VCs provide strategic mentorship, key networks, and market validation. Although it involves equity dilution and high performance expectations, venture capital builds world-class companies, drives technological innovation, and powers economic growth.",
+    conclusionText: "To conclude, venture capital is an indispensable growth engine for innovative, high-potential startups. Beyond capital funding, venture capitalists provide vital mentorship, strategic networking, and operational expertise. Although it involves significant risk, equity dilution, and intense return expectations, venture capital has built iconic global and Indian companies—driving technology innovation, employment generation, and national economic growth.",
     thankYou: "Thank You!"
   }
 ];
